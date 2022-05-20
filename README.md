@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+!: https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/Joey%20Zamora%20HW%2012 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -37,6 +37,9 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Metricbeat record?
   - It monitors the servers and collects metrics from the system and services that are running on the server
 
+The configuration details of each machine may be found below.
+
+
 |    Name   |                       Function                       |      IP Addresses      |              OS             |   |
 |:---------:|:----------------------------------------------------:|:----------------------:|:---------------------------:|---|
 | Jump Box  | Gateway & Docker with Ansible                        | 10.0.0.4/40.81.194.56  | Linux Ubuntu 18.04 LTS Gen2 |   |
@@ -47,11 +50,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump-Box-Provisioners machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- My public IP Address via SSH port 22
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by Jump-Box-Provisioner VM.
+
+- Which machine did you allow to access your ELK VM?
+  - 
+- What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
 
