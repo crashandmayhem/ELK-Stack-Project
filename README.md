@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
 
@@ -21,23 +21,28 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly responsive and available, in addition to restricting traffic to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- What aspect of security do load balancers protect? 
+  - Load balancers protect the company or organization from DDoS attacks because it analyzes the traffic coming in and determines what server to send the traffic to. This also prevents servers from being overloaded and with the aid of health probes, it periodically checks that a machine is working properly before sending any traffic
+ 
+- What is the advantage of a jump box?
+  - A jump box protects the virtual network by limiting who enters the domain by not allowing access to the other virtual machines unless the user knows the private IP addresses. We are also able to further restrict access by setting rules to allow certain traffic and IP addresses
 
-The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+- What does Filebeat watch for?
+  - Filebeat monitors the log data and/or locations that we specify in our playbook. We are then able to use a service like Kibana to read the data and access the detailed information
 
+- What does Metricbeat record?
+  - It monitors the servers and collects metrics from the system and services that are running on the server
+
+|    Name   |                       Function                       |      IP Addresses      |              OS             |   |
+|:---------:|:----------------------------------------------------:|:----------------------:|:---------------------------:|---|
+| Jump Box  | Gateway & Docker with Ansible                        | 10.0.0.4/40.81.194.56  | Linux Ubuntu 18.04 LTS Gen2 |   |
+| Web 1     | Web Server used to run DVWA                          | 10.0.0.5/20.222.86.67  | Linux Ubuntu 18.04 LTS Gen2 |   |
+| Web 2     | Web Server used to run DVWA                          | 10.0.0.6/20.222.86.67  | Linux Ubuntu 18.04 LTS Gen2 |   |
+| RedELK-VM | Elk Container with Filebeat and Metricbeat to Kibana | 10.1.0.4/20.70.162.220 | Linux Ubuntu 18.04 LTS Gen2 |   |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
