@@ -2,15 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-[Images/Elk_stack_Diagram.png](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Diagrams/Elk_Stack_Diagram.png)
+[Elk Stack](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Diagrams/Elk_Stack_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
   - [My-Playbook](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/my-playbook.yml)
-  - https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/install-elk.yml
-  - https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/filebeat-playbook.yml
-  -  https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/metricbeat-playbook.yml
-  -  https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/hosts_config.png
+  - [Install-Elk](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/install-elk.yml)
+  - [Filebeat-Playbook](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/filebeat-playbook.yml)
+  -  [Metricbeat-Playbook](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -92,7 +91,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/docker_ps.png
+[Docker PS](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
