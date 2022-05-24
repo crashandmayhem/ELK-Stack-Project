@@ -133,7 +133,8 @@ SSH into the control node and follow the steps below:
 
 - Which URL do you navigate to in order to check that the ELK server is running?
   - 20.70.162.220:5601/app/kibana
-    - [Filebeat](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/Filebeat_ss.png)
+    - ![Filebeat](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/Filebeat_ss.png)
+    - ![Metricbeat](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/Screenshot%202022-05-17%20122042.png)
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 ![Commands](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/Commands.png)
