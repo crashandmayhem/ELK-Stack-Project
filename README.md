@@ -119,9 +119,11 @@ SSH into the control node and follow the steps below:
 ### Answer the following questions to fill in the blanks:_
 - Which file is the playbook?
   - Filebeat-playbook.yml
+  - metricbeat-playbook.yml
 
 - Where do you copy it?
   - /etc/filebeat/filebeat.yml
+  - /etc/metricbeat/metricbeat.yml
 
 - Which file do you update to make Ansible run the playbook on a specific machine?
   - We navigte to /etc/ansible and nano into the hosts file to change and/or add the IP addresses of our Virtual Machines
