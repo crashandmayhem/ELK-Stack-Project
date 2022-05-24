@@ -103,24 +103,33 @@ We have installed the following Beats on these machines:
 - Metricbeats
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeats collects log information about the file system and specifies which files have changed. Examples would be specific files from Apache, Azure, and web servers
+- Metricbeats will be used to monitor the Virtual Machine stats and status; ie: Memory status, CPU core usage, Network status
+  - We can log into Kibana and get detailed information about all of the statistics ranging from specified data ranges starting from day one installed until seconds       ago
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-config.yml file to /etc/ansible/files/filebeat-config.yml
+- Update the filebeat-config file to include host ip address for ELK VM for both output.elesticsearch and setup.kibana
+- Run the playbook, and navigate to Elk's Public IP address:5601/app/kibana to check that the installation worked as expected. Once there we can check the log data       and/or metricbeats in the docker section
 
-_TODO: Answer the following questions to fill in the blanks:_
+
+### Answer the following questions to fill in the blanks:_
 - Which file is the playbook?
   - Filebeat-playbook.yml
 
 - Where do you copy it?
   - /etc/filebeat/filebeat.yml
 
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Which file do you update to make Ansible run the playbook on a specific machine?
+  - We navigte to /etc/ansible and nano into the hosts file to change and/or add the IP addresses of our Virtual Machines
+ 
+- How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+  - Within the hosts file I have created two seperate host groups to manage by playbooks. One is azureweb which is for the Virtual Machines and the other is titles elk     for the Elk Server
+
+- Which URL do you navigate to in order to check that the ELK server is running?
+  - 20.70.162.220:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
