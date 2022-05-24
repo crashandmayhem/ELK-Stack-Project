@@ -135,3 +135,4 @@ SSH into the control node and follow the steps below:
   - 20.70.162.220:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+![Commands](https://github.com/crashandmayhem/ELK-Stack-Project/blob/main/Images/Commands.png)
